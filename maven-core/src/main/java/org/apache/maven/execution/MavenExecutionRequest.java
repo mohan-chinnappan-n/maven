@@ -28,6 +28,7 @@ import java.util.Properties;
 import org.apache.maven.artifact.repository.ArtifactRepository;
 import org.apache.maven.artifact.repository.ArtifactRepositoryPolicy;
 import org.apache.maven.eventspy.internal.EventSpyDispatcher;
+import org.apache.maven.lifecycle.internal.builder.Builder;
 import org.apache.maven.model.Profile;
 import org.apache.maven.project.ProjectBuildingRequest;
 //
@@ -356,15 +357,15 @@ public interface MavenExecutionRequest
     MavenExecutionRequest setUserToolchainsFile( File userToolchainsFile );
 
     /**
-     * 
-     * 
+     *
+     *
      * @return the global toolchains file
      * @since 3.3.0
      */
     File getGlobalToolchainsFile();
 
     /**
-     * 
+     *
      * @param globalToolchainsFile the global toolchains file
      * @return this request
      * @since 3.3.0
@@ -402,15 +403,15 @@ public interface MavenExecutionRequest
     String getBuilderId();
 
     /**
-     * 
-     * @param toolchains all toolchains grouped by type 
-     * @return this request 
+     *
+     * @param toolchains all toolchains grouped by type
+     * @return this request
      * @since 3.3.0
      */
     MavenExecutionRequest setToolchains( Map<String, List<ToolchainModel>> toolchains );
-    
+
     /**
-     * 
+     *
      * @return all toolchains grouped by type, never {@code null}
      * @since 3.3.0
      */
@@ -428,9 +429,9 @@ public interface MavenExecutionRequest
 
     /**
      * @since 3.3.0
-     */    
+     */
     MavenExecutionRequest setEventSpyDispatcher( EventSpyDispatcher eventSpyDispatcher );
-    
+
     /**
      * @since 3.3.0
      */
